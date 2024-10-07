@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: purple;
+    transition: background-color 0.05s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .profile-container {
+    text-align: center;
+    z-index: 2; /* Ensure profile is above background text */
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid purple;
+    position: relative;
+  }
+  
+  .profile-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.05s ease, filter 0.05s ease;
+  }
+  
+  .profile-pic.glitchy img {
+    transform: scale(1.1) translateX(5px);
+    filter: hue-rotate(180deg) contrast(250%);
+  }
+  
+  h2, p {
+    margin: 10px 0;
+    transition: color 0.05s ease;
+  }
+  
+  .glitch-bg {
+    background-color: purple;
+  }
+  
+  .glitch-text {
+    color: black !important;
+    transition: transform 0.05s ease;
+  }
+  
+  .glitch-name {
+    color: black !important;
+    font-weight: bold;
+  }
+  
+  .background-text {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+    font-size: 2rem;
+    font-weight: bold;
+    pointer-events: none; /* Prevent interaction */
+    white-space: nowrap; /* Prevent wrapping */
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Start hidden */
+  }
+  
